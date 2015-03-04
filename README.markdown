@@ -52,11 +52,11 @@ class { 'java':
 
 * `distribution`: The Java distribution to install. Valid options:  'jdk', 'jre', or, where the platform supports alternative packages, 'sun-jdk', 'sun-jre', 'oracle-jdk', 'oracle-jre'. Default: 'jdk'.
 
-* `java_alternative`: The name of the Java alternative to use. If you set this parameter, *you must also set the `java_alternative_path`.* Valid options: String. The command `update-java-alternatives -l` will show which choices are available. Default: OS and distribution dependent defaults on *deb systems, undefined on others.
+* `java_alternative`: The name of the Java alternative to use. If you set this parameter, *you must also set the `java_alternative_path`.* Valid options: String. The command `update-java-alternatives -l` will show which choices are available. Default: OS and distribution dependent defaults on *deb systems, undef on others.
 
-* `java_alternative_path`: *Required when `java_alternative` is specified.* The path to the `java` command. Valid option: String. Default: OS and distribution dependent defaults on *deb systems, undefined on others.
+* `java_alternative_path`: *Required when `java_alternative` is specified.* The path to the `java` command. Valid option: String. Default: OS and distribution dependent defaults on *deb systems, undef on others.
 
-* `package`: The name of the Java package. This is configurable in case you want to install a non-standard Java package. If not set, the module will install the appropriate package for the `distribution` parameter and target platform. If you set `package`, the `distribution` parameter will do nothing. Valid option: String. Default: undefined. 
+* `package`: The name of the Java package. This is configurable in case you want to install a non-standard Java package. If not set, the module will install the appropriate package for the `distribution` parameter and target platform. If you set `package`, the `distribution` parameter will do nothing. Valid option: String. Default: undef. 
 
 * `version`: The version of Java to install, if you want to ensure a particular version. Valid options: 'present', 'installed', 'latest', or a string matching `/^[.+_0-9a-zA-Z:-]+$/`. Default: 'present'.
 
